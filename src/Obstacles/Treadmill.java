@@ -11,4 +11,16 @@ public class Treadmill implements Obstacle{
     public int getDistant() {
         return distant;
     }
+
+    @Override
+    public int getObstacle() {
+        return distant;
+    }
+
+    @Override
+    public String toString() {
+        return "Treadmill{" +
+                "distant=" + distant +
+                '}';
+    }
 }

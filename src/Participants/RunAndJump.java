@@ -1,14 +1,12 @@
 package Participants;
 
-import Obstacles.Obstacle; //Пустышка
-import Obstacles.Treadmill;
-import Obstacles.Wall;
+import Obstacles.Obstacle;
 
 public interface RunAndJump {
 
-    boolean jump(Wall wall);
+    boolean jump(Obstacle obstacle);
 
-    boolean run(Treadmill treadmill);
+    boolean run(Obstacle obstacle);
 
 
 }

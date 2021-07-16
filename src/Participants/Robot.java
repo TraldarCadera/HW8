@@ -1,8 +1,6 @@
 package Participants;
 
 import Obstacles.Obstacle;
-import Obstacles.Treadmill;
-import Obstacles.Wall;
 
 public class Robot implements RunAndJump{
 
@@ -19,8 +17,8 @@ public class Robot implements RunAndJump{
     }
 
     @Override
-    public boolean jump(Wall wall) {
-        if (wall.getHeight() <= jumpHeight) {
+    public boolean jump(Obstacle obstacle) {
+        if (obstacle.getObstacle() <= jumpHeight) {
             System.out.printf("Робот %s успешно перепрыгнул препятствие\n", name);
             return true;
         } System.out.printf("Робот %s не смог перепрыгнуть препятствие\n", name);
@@ -28,8 +26,8 @@ public class Robot implements RunAndJump{
     }
 
     @Override
-    public boolean run(Treadmill treadmill) {
-        if (treadmill.getDistant() <= runDistant) {
+    public boolean run(Obstacle obstacle) {
+        if (obstacle.getObstacle() <= runDistant) {
             System.out.printf("Робот %s успешно пробежал дистанцию.\n", name);
             return true;
         } System.out.printf("Робот %s не смог пробежать дистанцию\n", name);

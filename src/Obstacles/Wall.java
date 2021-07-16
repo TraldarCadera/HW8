@@ -11,4 +11,16 @@ public class Wall implements Obstacle{
     public int getHeight() {
         return height;
     }
+
+    @Override
+    public int getObstacle() {
+        return height;
+    }
+
+    @Override
+    public String toString() {
+        return "Wall{" +
+                "height=" + height +
+                '}';
+    }
 }
